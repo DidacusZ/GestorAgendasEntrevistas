@@ -1,0 +1,10 @@
+<h2>Registroo</h2>
+
+<form [formGroup]="formularioCliente" (ngSubmit)="onSubmit()">
+    <p>Nombre: <input formControlName="nombre" /></p>
+    <p>Apellidos: <input formControlName="apellidos" /></p>
+    <p>Telefono: <input formControlName="telefono" /></p>
+    <p>Email: <input formControlName="email" /></p>
+    <p>DNI: <input formControlName="dni" /></p>
+    <input type="submit" value="Registrar">
+</form>
