@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "quick-charger-369422": {
+      "hosting": {
+        "agendaEntrevistas": [
+          "gestionagendas"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "quick-charger-369422"
+  }
+}
