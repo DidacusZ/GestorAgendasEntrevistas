@@ -1,6 +1,6 @@
 export interface Entrevistador {
 
-    id:number;
+    id:string;
     nombre:string;
     apellidos:string;
     telefono:string;

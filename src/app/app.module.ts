@@ -9,23 +9,24 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment.development';
 import { RegistroComponent } from './vistas/registro/registro.component';
 import { ReservarCitaComponent } from './vistas/reservar-cita/reservar-cita.component';
+import { DetalleClienteComponent } from './vistas/detalle-cliente/detalle-cliente.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroComponent,
-    ReservarCitaComponent
+    ReservarCitaComponent,
+    DetalleClienteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore()),
-    provideFirebaseApp(() => initializeApp({"projectId":"quick-charger-369422","appId":"1:513396323129:web:58cdfaecadfef420c8eee8","storageBucket":"quick-charger-369422.appspot.com","apiKey":"AIzaSyBjbIHczpbNwbW8UzF8Dc_5vb-AyTmC6zk","authDomain":"quick-charger-369422.firebaseapp.com","messagingSenderId":"513396323129"})),
+    provideFirestore(() => getFirestore())
   ],
-  providers: [],
+  providers: [  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

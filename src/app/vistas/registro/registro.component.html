@@ -1,35 +1,3 @@
-<!-- 
-  <div>
-    <h2>Añadir Cliente</h2>
-    <form (ngSubmit)="agregarCliente()">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" [(ngModel)]="nuevoCliente.nombre" required>
-
-      <label for="apellidos">Apellidos:</label>
-      <input type="text" id="apellidos" [(ngModel)]="nuevoCliente.apellidos" required>
-
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" [(ngModel)]="nuevoCliente.telefono" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" [(ngModel)]="nuevoCliente.email" required>
-
-      <label for="dni">DNI:</label>
-      <input type="text" id="dni" [(ngModel)]="nuevoCliente.dni" required>
-
-      <button type="submit">Añadir Cliente</button>
-    </form>
-
-    <h2>Listado de Clientes</h2>
-    <ul *ngIf="clientes.length > 0">
-      <li *ngFor="let cliente of clientes">
-        {{ cliente.nombre }} {{ cliente.apellidos }} ({{ cliente.dni }})
-      </li>
-    </ul>
-    <p *ngIf="clientes.length === 0">No hay clientes registrados.</p>
-  </div>
- -->
-
  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
   <label>
@@ -54,3 +22,13 @@
   </label>
   <button type="submit">Submit</button>
 </form>
+
+<ul>
+  <li *ngFor="let dato of datosFirebase">
+    {{ dato | json }}
+  </li>
+</ul>
+
+<app-detalle-cliente></app-detalle-cliente>
+
+
